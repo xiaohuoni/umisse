@@ -4,9 +4,18 @@ import { useIntl, Icon, useParams, useModel, Link, history } from 'umi';
 import { Button, theme } from 'antd';
 import { Show } from '@alita/flow';
 
+const UserIcon = () => {
+  const { token } = theme.useToken();
+  return (
+    <Icon
+      icon="grommet-icons:user"
+      style={{ fontSize: '56px', color: token.colorPrimary }}
+    />
+  );
+};
+
 const HiPage: FC = () => {
   const intl = useIntl();
-  const { token } = theme.useToken();
   const { index = '' } = useParams();
   const { setNewUser, users } = useModel('user');
   useEffect(() => {
@@ -17,10 +26,7 @@ const HiPage: FC = () => {
 
   return (
     <div>
-      <Icon
-        icon="grommet-icons:user"
-        style={{ fontSize: '56px', color: token.colorPrimary }}
-      />
+      <UserIcon />
       <h2>
         {intl.formatMessage(
           {

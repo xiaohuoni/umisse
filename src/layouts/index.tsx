@@ -1,12 +1,10 @@
 import { useLocation } from 'umi';
-import { ConfigProvider, theme, Layout } from 'antd';
+import { ConfigProvider, theme, Layout, App } from 'antd';
 import React, { FC, useState } from 'react';
 import { HomeLayout } from './home';
 import { DefaultLayout } from './default';
 import { NotFoundLayout } from './404';
 import { TheFooter } from '@/components/TheFooter';
-import { base } from '@theme-ui/preset-base';
-import { ThemeProvider } from 'theme-ui';
 import { useDark } from '@/hooks/useDark';
 import { MDXProvider } from '@mdx-js/react';
 
@@ -16,27 +14,6 @@ const components = {
   Layout: (props: any) => <div {...props} style={{ color: 'red' }} />,
 };
 
-const Theme: FC<any> = (props) => {
-  const { token } = theme.useToken();
-  return (
-    <ThemeProvider
-      theme={{
-        ...base,
-        colors: {
-          background: token.colorBgBase,
-          //  what is muted for antd5 ???
-          muted: token.colorText,
-          primary: token.colorPrimary,
-          // what is secondary for antd5 ???
-          secondary: token.colorPrimary,
-          text: token.colorText,
-        },
-      }}
-    >
-      <MDXProvider components={components}>{props.children}</MDXProvider>
-    </ThemeProvider>
-  );
-};
 export default () => {
   const { pathname } = useLocation();
   const [darkTheme, changeTheme] = useDark();
@@ -60,16 +37,16 @@ export default () => {
         token: !!colorPrimary ? { colorPrimary, colorInfo: colorPrimary } : {},
       }}
     >
-      <Theme>
+      <App>
         <Layout
           hasSider={false}
           style={{
-            height: '100%',
+            height: '100vh',
             margin: 0,
             padding: 0,
           }}
         >
-          {layout}
+          <MDXProvider components={components}>{layout}</MDXProvider>
           <Layout.Footer style={{ textAlign: 'center' }}>
             <TheFooter
               changeTheme={changeTheme}
@@ -79,7 +56,7 @@ export default () => {
             />
           </Layout.Footer>
         </Layout>
-      </Theme>
+      </App>
     </ConfigProvider>
   );
 };
