@@ -1,0 +1,16 @@
+export default {
+  hello: 'Hello Umi SSE',
+  'button.home': 'Home',
+  'button.about': 'About',
+  'button.back': 'Back',
+  'button.go': 'GO',
+  'button.toggle_theme': 'Toggle theme mode',
+  'button.toggle_langs': 'Change languages',
+  'button.color_primary': 'Primary Color',
+  'intro.desc': 'Opinionated Umi@4 + Antd@5 Starter Template',
+  'intro.dynamic-route': 'Demo of dynamic route',
+  'intro.hi': 'Hi, {name}!',
+  'intro.aka': 'Also known as',
+  'intro.whats-your-name': `What's your name?`,
+  'not-found': 'Not found',
+};

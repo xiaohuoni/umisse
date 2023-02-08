@@ -1,0 +1,16 @@
+export default {
+  hello: '你好 Umi SSE',
+  'button.home': '首页',
+  'button.about': '关于',
+  'button.back': '返回',
+  'button.go': '确定',
+  'button.toggle_theme': '切换主题模式',
+  'button.toggle_langs': '切换语言',
+  'button.color_primary': '主题色',
+  'intro.desc': '自用的 Umi@4 + Antd@5 项目模板',
+  'intro.dynamic-route': ' 动态路由演示',
+  'intro.hi': '你好，{name}',
+  'intro.aka': '也叫',
+  'intro.whats-your-name': '输入你的名字',
+  'not-found': '未找到页面',
+};
