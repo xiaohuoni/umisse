@@ -34,6 +34,10 @@ TODO
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [pnpm](https://pnpm.js.org/) - fast, disk space efficient package manager
+- [VS Code Extensions](./.vscode/extensions.json)
+  - [Playwright Test for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright) - Run Playwright Test tests in Visual Studio Code.
+  - [Umi Pro](https://marketplace.visualstudio.com/items?itemName=DiamondYuan.umi-pro) - Write Umi like a Pro!
+- [Playwright](https://playwright.dev/) - Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API.
 - TODO
 
 ## Try it now!

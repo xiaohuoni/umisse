@@ -61,6 +61,7 @@ const TheFooter: FC<TheFooterProps> = ({ changeTheme, selectTheme }) => {
           icon="grommet-icons:sun"
           onClick={changeTheme}
           style={{ margin: '0 8px' }}
+          data-testid="toggle_theme"
         />
       </Tooltip>
       <Tooltip
@@ -71,6 +72,7 @@ const TheFooter: FC<TheFooterProps> = ({ changeTheme, selectTheme }) => {
         <Icon
           icon="grommet-icons:language"
           onClick={toggleLocales}
+          data-testid="toggle_langs"
           style={{ margin: '0 8px' }}
         />
       </Tooltip>
@@ -82,6 +84,7 @@ const TheFooter: FC<TheFooterProps> = ({ changeTheme, selectTheme }) => {
         <Icon
           icon="grommet-icons:contact"
           onClick={() => history.push('/about')}
+          data-testid="contact"
           style={{ margin: '0 8px' }}
         />
       </Tooltip>
@@ -118,6 +121,7 @@ const TheFooter: FC<TheFooterProps> = ({ changeTheme, selectTheme }) => {
           <Icon
             icon="grommet-icons:clear-option"
             onClick={showModal}
+            data-testid="color_primary"
             style={{ margin: '0 8px' }}
           />
         </Popover>
